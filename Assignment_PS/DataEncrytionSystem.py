@@ -1,5 +1,5 @@
 
-key = 10
+key = 11
 
 def DataEncryptionSystem(messageStr): 
 
@@ -8,7 +8,7 @@ def DataEncryptionSystem(messageStr):
         if ord(messageStr[i]) >= 32 and ord(messageStr[i]) <= 47:
             res += chr(32 + (32 - ord(messageStr[i]) + key)%16)
         elif ord(messageStr[i]) >= 48 and ord(messageStr[i]) <= 57:
-            res += chr(48 + (48 - ord(messageStr[i]) + key)%16)
+            res += chr(48 + (48 - ord(messageStr[i]) + key)%10)
         elif ord(messageStr[i]) >= 58 and ord(messageStr[i]) <= 64:
             res += chr(58 + (58 - ord(messageStr[i]) + key)%7)
         elif ord(messageStr[i]) >= 65 and ord(messageStr[i]) <= 90:
