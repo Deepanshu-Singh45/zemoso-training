@@ -197,13 +197,7 @@ function deleteIt(ID1, i) {
     document.getElementById(ID1).style.textDecoration = "line-through";
 }
 
-// const value1 = `<tr class="modalcontent">
-    //                     <td>                  </td>
-    //                     <td>                  </td>
-    //                     <td class='${defaultBillModal}'></td>
-    //                     <td>    </td>
-    //                     <td>    </td>
-    //                 </tr>`
+
 function calculateBill() {
 
     let len = modalArr.length;
@@ -222,13 +216,10 @@ function calculateBill() {
             let v = parseInt(val.value);
             console.log(p," : - ", v);
             totalBill += p * v;
-            // console.log(totalAmount);
             idx++;
-            // console.log("calculate bill", totalBill);
         }
 
     }
-    // totalBill = totalAmount;
     console.log("calculate bill", totalBill);
     
 
@@ -237,7 +228,6 @@ function calculateBill() {
 function calculateDefaultBill(id) {
     let len = modalArr.length;
     let idx = 1;
-    // let id = impID;
     var totalDefaultAmount = 0;
     
     for(let i = 0; i < len; i++) {
@@ -246,13 +236,11 @@ function calculateDefaultBill(id) {
            
             console.log("price ;>",parseInt(modalArr[i].price));
             totalDefaultAmount += parseInt(modalArr[i].price);
-            // console.log(totalAmount);
             idx++;
             console.log("calculate def bill", totalDefaultAmount);
         }
 
     }
-    // totalBill = totalAmount;
     console.log("calculate default bill", totalDefaultAmount);
     return totalDefaultAmount;
 }
@@ -327,29 +315,9 @@ function drop_handler(ev, id) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   console.log("Data : ")
-  console.log(data,":--- ", id);
-//   let node = document.getElementById(data).cloneNode(true);
-//   ev.target.appendChild(node);
-//   console.log("Drop");
-    // console.log(ev.target.div);
-    // ev.preventDefault();
-    // var dti = ev.dataTransfer.items;
+
     newObject['id'] = id;
-    // newObject['count'] = 1;
     
-    // console.log('retrievedObject: ',     JSON.parse(retrievedObject));
-    
-  // -------------------------------------
-    // let flag = true;
-    // let len = modalArr.length;
-    // for(let i = 0; i < len; i++) {
-
-    //     if(newObject['item'] === modalArr[i].item && newObject['id'] === modalArr[i].id) {
-    //         modalArr[i].count += 1;
-    //     }
-
-    // }
-
 
   if(sessionStorage.DataModal)
     {
@@ -361,15 +329,9 @@ function drop_handler(ev, id) {
     console.log(DataModal);
     sessionStorage.setItem('DataModal', JSON.stringify(DataModal));
 
-    // var retrievedObject = sessionStorage.getItem('DataModal');
-    // console.log('retrievedObject: ',     JSON.parse(retrievedObject));
-    // window.sessionStorage.setItem(newObject['id'], JSON.stringify(newObject));
-    // var retrievedObject = sessionStorage.getItem('DataModal');
-    // modalArr = JSON.parse(retrievedObject);
+    
     var retrievedObject = sessionStorage.getItem('DataModal');
-    // console.log('retrievedObject: ',     JSON.parse(retrievedObject));
     modalArr = JSON.parse(retrievedObject);
-    // document.getElementById('default').textContent = "Total : " + calculateDefaultBill(id);
     console.log("def bill -- ", calculateDefaultBill(id));
     console.log(calculateDefaultBill(' table-1 '));
     
@@ -382,7 +344,6 @@ function drop_handler(ev, id) {
         else {
             console.log("Not Present");
         }
-        // console.log(document.getElementsByTagName('s));
 
     if(id === ' table-1 ') {
         document.getElementById('100').textContent = "Total Items : " + (modalArr.length + prevlen);
@@ -400,9 +361,7 @@ function drop_handler(ev, id) {
         document.getElementById('202').textContent = "Total Amount : " + calculateDefaultBill(id);
         document.getElementById('800').textContent = "Total : " + calculateDefaultBill(id);
     }
-    // modalArr.push(object);
     var nodeCopy = document.getElementById(id).cloneNode(true);
-    // nodeCopy.id = "newId";
     ev.target.appendChild(nodeCopy);
 }
 
@@ -412,36 +371,4 @@ function dragend_handler(ev) {
     
     dti.clear();
 }
-
-
-// for Modal in table section
-
-// document.getElementById("modal_btn").onclick = function(){
-//     document.getElementById("modal").style.display = 'block';
-// }
-
-// var modal = document.getElementById("myModal");
-// // Get the <span> element that closes the modal
-// var btn = document.getElementById("myBtn");
-
-
-
-// // When the user clicks the button, open the modal 
-// btn.onclick = function() {
-//     modal.style.display = "block";
-// }
-
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//     if (event.target == modal) {
-//         modal.style.display = "none";
-//     }
-// }
-
-
 
