@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurant Billing System</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+    
+
+   
+        <!-- Modals -->
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <button class="close" onclick="closeit()">Generate Bill</button>
+              <h2 id="tab-heading"></h2>
+              <table >
+                <tbody id="myModal1">
+                <!-- <tr>
+                    <th></th>
+                </tr> -->
+                
+                    <tr id="row1">
+                        <th>S No.</th>
+                        <th>Items</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </tbody>
+              </table>
+              <p id="deep">Total : </p>
+            </div>
+          
+        </div>
+
+
+        <div class="split left" id="table-list">
+
+            
+            <h1>Tables</h1>
+            <div class="topnav1">
+                <input type="text" id="mytable" onkeyup="searchTable()" placeholder="Search Table.." title="Type here table preference">
+            </div>
+            
+            
+        </div>
+          
+        <div class="split right" id="menu-list">
+            <h1>Menu</h1>
+
+            <div class="topnav2">
+                <input type="text" id="mymenu" onkeyup="searchFood()" placeholder="Search Menu.. by course, by food" title="Type here your favorite food">
+            </div>
+           
+        </div>
+
+           
+        <script src="index.js"></script>
+
+    </body>
+</html>
