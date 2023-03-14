@@ -1,0 +1,192 @@
+
+
+* {
+    padding:0;
+    margin:0;
+}
+  
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+}
+
+p {
+    padding: 1%;
+}
+
+.split {
+    height: 100%;
+    width: 35%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+.left {
+    left: 0;
+
+    border-right:10px solid black;
+}
+
+.right {
+    right: 0;
+    height: 100%;
+    width: 65%;
+}
+  
+
+.table {
+    margin: 2%;
+    width: 96%;
+    border: 5px solid rgb(206, 134, 47);
+    padding: 3%;
+    cursor: pointer;
+    border-radius: 2px;
+    border-radius: 10px;
+}
+
+.food-card {
+    border: 5px solid rgb(206, 134, 47);
+    margin: 5% 3.5%;
+    padding: 2%;
+    height: 10%;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.food {
+    padding: 1%;
+}
+
+.topnav1 {
+    width : 95%;
+    height: 20px;
+    margin: 5% 1.5%;
+}
+  
+.topnav1 input {
+    width : 100%;
+    padding: 1%;
+    border: 2px solid black;
+    font-size: 17px;
+    border-radius: 8px;
+}
+
+.topnav2 {
+    width : 91%;
+    height: 20px;
+    margin: 3% 1% 3% 3.5%;
+}
+
+.topnav2 input {
+    width : 100%;
+    padding: 1%;
+    border: 2px solid black;
+    font-size: 17px;
+    border-radius: 8px;
+}
+
+/* Styling the open modal button */
+/* .modalbtn {
+    background-color: #B1A9D4;
+    border-radius: 5px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+/* Styling the close modal button */
+/* .closebtn {
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+} */
+/* .closebtn:hover {
+    cursor: pointer;
+} */
+/* Styling the modal container */
+/* .modal {
+    display: none;
+} */
+/* Styling the text inside the modal */
+/* .modalcontent {
+    position: relative;
+    font-size: 15px;
+    padding: 15px;
+    background-color: #DEDAF7;
+    width: 60%;
+    text-align: center;
+    margin: 2%;
+} */ 
+
+th, td {
+    display : inline;
+    padding : 5px 25px;
+}
+.button1 {
+    display: inline;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    
+}
+
+/* The Close Button */
+.close {
+    color: palevioletred;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1.08%;
+}
+
+.x {
+    color: palevioletred;
+    float: right;
+    left : 80%;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1;
+}
+
+
+.close:hover
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#tab-heading {
+    color: white;
+    background-color: purple;
+    text-align: center;
+    padding: 1%;
+}
