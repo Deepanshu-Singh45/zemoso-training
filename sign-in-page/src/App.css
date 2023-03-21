@@ -45,12 +45,7 @@ Input {
   display: block;
   padding: 5px;
 }
-Checkbox {
-  display: inline;
-}
-Typo {
-  margin: 50px 10px;
-}
+
 .checkbox1 {
   display: flex;
   flex-direction: row;
