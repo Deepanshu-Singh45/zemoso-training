@@ -9,7 +9,6 @@ import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { Divider } from '@mui/material';
-// import Checkbox from './Checkbox'
 import Checkbox from '@mui/material/Checkbox';
 import { Typography } from '@mui/material';
 
@@ -45,7 +44,6 @@ export default function MenuListComposition() {
     }
   }
 
-  // return focus to the button when we transitioned from !open -> open
   const prevOpen = React.useRef(open);
   React.useEffect(() => {
     if (prevOpen.current === true && open === false) {

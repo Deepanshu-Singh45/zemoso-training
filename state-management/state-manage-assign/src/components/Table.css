@@ -15,7 +15,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 border-radius: 10px;
-/* margin: 2% 0; */
+
 }
 .header {
 background-color: white;
@@ -23,20 +23,17 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 padding: 2% 1.2%;
-/* border-radius: 10px; */
+
 }
 .button {
     display: inline;
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
+   
     margin: 5px 10px;
     font-size: large;
     padding: 10px;
-/* padding: 5px 10px 25px 5px;  */
+
 }
-/* AddIcon {
-padding-top: 10px;
-} */
+
 #manual {
 color: white;
 background-color: blue;
