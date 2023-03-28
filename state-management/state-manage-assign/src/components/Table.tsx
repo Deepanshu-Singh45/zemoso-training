@@ -1,5 +1,4 @@
 
-import MenuList from '@mui/material/MenuList';
 
 import Checkbox from '@mui/material/Checkbox';
 import Menu from '@mui/material/Menu';
@@ -13,7 +12,6 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import TableRow from '@mui/material/TableRow';
 
 import React, { useState, useEffect } from "react";
-import { Select } from "@mui/material";
 
 import Table from '@mui/material/Table';
 
@@ -21,19 +19,14 @@ import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Chip from '@mui/material/Chip';
 import Text from './Heading';
-import MenuListComposition from './Filter'
 import SystemUpdateAltIcon from '@mui/icons-material/SystemUpdateAlt';
 import AddIcon from '@mui/icons-material/Add';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Popper from '@mui/material/Popper';
-import Stack from '@mui/material/Stack';
+
 import FilterListIcon from '@mui/icons-material/FilterList';
 import Button from '@mui/material/Button'
 import './Table.css'
 import './Filter';
-import filteredData from './Filter';
-import Filter from './Filter';
+
 
 
 function createData(
@@ -91,10 +84,7 @@ export default function BasicTable() {
   }, [stat]);
 
   
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
-
+  
   
   function handleListKeyDown(event: React.KeyboardEvent) {
     if (event.key === 'Tab') {
@@ -270,8 +260,4 @@ export default function BasicTable() {
     </div>
   );
 }
-function useCallback(arg0: () => void, arg1: never[]) {
-  throw new Error('Function not implemented.');
-}
-
 
