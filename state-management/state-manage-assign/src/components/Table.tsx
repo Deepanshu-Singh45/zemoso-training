@@ -214,7 +214,7 @@ export default function BasicTable() {
             <TableBody>
               {filteredRows.map((row) => (
                 <TableRow
-                  
+                  key={row.name}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell component="th" scope="row" style={{color:'blue'}}>
@@ -234,7 +234,7 @@ export default function BasicTable() {
             <TableBody>
               {filteredData.map((row) => (
                 <TableRow
-                  
+                  key={row.name}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell component="th" scope="row" style={{color:'blue'}}>
