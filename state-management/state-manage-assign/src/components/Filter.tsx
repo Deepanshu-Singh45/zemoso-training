@@ -10,7 +10,7 @@ import Stack from '@mui/material/Stack';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { Divider } from '@mui/material';
 import Checkbox from '@mui/material/Checkbox';
-import { Typography } from '@mui/material';
+import  Typography  from '@mui/material/Typography';
 
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
