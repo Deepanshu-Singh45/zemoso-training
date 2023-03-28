@@ -63,7 +63,6 @@ export default function BasicTable() {
   
 
   const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef<HTMLButtonElement>(null);
   const filteredRows = rows.filter((row) => 
     row.name.toLowerCase().includes(searchQuery.toLowerCase()),
     
@@ -215,7 +214,7 @@ export default function BasicTable() {
             <TableBody>
               {filteredRows.map((row) => (
                 <TableRow
-                  // key={row.name}
+                  
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell component="th" scope="row" style={{color:'blue'}}>
@@ -223,7 +222,7 @@ export default function BasicTable() {
                   </TableCell>
                   <TableCell align="right">{row.adjudication}</TableCell>
                   <TableCell align="right">
-                    {/* {row.status} */}
+                    
                     <Chip variant={'outlined'} label={row.status} color={row.status === 'CLEAR' ? 'success' : 'warning'}
                     style={{backgroundColor: row.status === 'CLEAR' ? '#F2F4FC' : '#FAF8EB', borderRadius: 0, border : 0, } } />
                   </TableCell>                  <TableCell align="right">{row.location}</TableCell>
@@ -235,7 +234,7 @@ export default function BasicTable() {
             <TableBody>
               {filteredData.map((row) => (
                 <TableRow
-                  // key={row.name}
+                  
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell component="th" scope="row" style={{color:'blue'}}>
@@ -243,7 +242,7 @@ export default function BasicTable() {
                   </TableCell>
                   <TableCell align="right">{row.adjudication}</TableCell>
                   <TableCell align="right">
-                    {/* {row.status} */}
+                   
                     <Chip variant={'outlined'} label={row.status} color={row.status === 'CLEAR' ? 'success' : 'warning'}
                     style={{backgroundColor: row.status === 'CLEAR' ? '#F2F4FC' : '#FAF8EB', borderRadius: 0, border : 0, } } />
                   </TableCell>                  <TableCell align="right">{row.location}</TableCell>
