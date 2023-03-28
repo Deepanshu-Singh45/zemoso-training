@@ -53,7 +53,6 @@ function searchFood() {
 
         let div = document.getElementById('menu-list');
         let foodCard = "";
-
         foodArr.map((food) => {
             if(food.category == input) {
                 const value = `<div class='food-card ${food.category}' id='${food.id}'
@@ -63,11 +62,8 @@ function searchFood() {
                             </div>`;
                 foodCard += value;
             }
-            
-
         })
         div.innerHTML += foodCard;
-        
 
     }
     else {
