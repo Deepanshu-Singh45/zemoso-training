@@ -1,10 +1,5 @@
 
 
-// import React from 'react';
-
-// export interface CheckboxProps {
-//   label : string
-// }
 
 export const Checkbox = () => {
   return (
@@ -14,6 +9,6 @@ export const Checkbox = () => {
   )
 }
 
-// export default Checkbox;
+
 
 
