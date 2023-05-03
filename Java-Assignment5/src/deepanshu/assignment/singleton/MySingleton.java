@@ -1,22 +1,19 @@
-package deepanshu.assignment.singleton;
+package deepanshu.assignment.data;
 
-public class MySingleton {
-    private String myString;
+public class MyClass {
+    int myInt;
+    char myChar;
 
-    public static MySingleton initializeString(String str) {
-        MySingleton singleton = new MySingleton();
-        singleton.myString = str;
-        return singleton;
+    public void printVariables() {
+        System.out.println("myInt: " + myInt);
+        System.out.println("myChar: " + myChar);
     }
 
-    public void printString() {
-        System.out.println("myString: " + myString);
-    }
-
-
-
-    public static void main(String[] args) {
-        MySingleton mySingletonClass = new MySingleton();
-        mySingletonClass.printString();
+    public void printLocalVariables() {
+        int i;
+        char c;
+        // compilation error will occur.
+        // System.out.println("i: " + i);
+        // System.out.println("c: " + c);
     }
 }
