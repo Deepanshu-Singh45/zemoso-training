@@ -64,34 +64,3 @@ public class SList<T> {
     }
 }
 
-//class SListIterator<T> {
-//    private Node current;
-//    public SListIterator() {
-//        current = start;
-//    }
-//    public boolean hasNext() {
-//        return current != null;
-//    }
-//
-//    public T next() {
-//        if (!hasNext()) {
-//            throw new NoSuchElementException();
-//        }
-//        T data = current.data;
-//        current = current.next;
-//        return data;
-//    }
-//
-//    public void insert(T data) {
-//        Node<T> newNode = new Node<>(data);
-//        newNode.next = current.next;
-//        current.next = newNode;
-//    }
-//
-//    public void remove() {
-//        if (current == null) {
-//            throw new NoSuchElementException();
-//        }
-//        current.next = current.next.next;
-//    }
-//}
