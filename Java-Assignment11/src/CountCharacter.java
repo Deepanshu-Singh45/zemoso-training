@@ -5,10 +5,7 @@ import java.util.Map;
 public class CountCharacter {
 
     public static void main(String[] args) throws Exception {
-//        if (args.length == 0) {
-//            System.out.println("Usage: java CharacterCount <filename>");
-//            System.exit(1);
-//        }
+
         File fileName = new File("D:\\Java Core\\Assignment11\\src\\text.txt");
         Map<Character, Integer> charCountMap = new HashMap<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
