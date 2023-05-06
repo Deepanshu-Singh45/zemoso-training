@@ -1,18 +1,18 @@
 // Define three custom exceptions
-class CustomException1 extends Exception {}
-class CustomException2 extends Exception {}
-class CustomException3 extends Exception {}
+class IncorrectFileName extends Exception {}
+class AgeVerification extends Exception {}
+class EmailVerification extends Exception {}
 
 public class UserDefineException {
     // A method that throws all three exceptions
-    public static void myMethod(int option) throws CustomException1, CustomException2, CustomException3 {
+    public static void myMethod(int option) throws IncorrectFileName, AgeVerification, EmailVerification {
         switch (option) {
             case 1:
-                throw new CustomException1();
+                throw new IncorrectFileName();
             case 2:
-                throw new CustomException2();
+                throw new AgeVerification();
             case 3:
-                throw new CustomException3();
+                throw new EmailVerification();
             default:
                 throw new NullPointerException();
         }
@@ -21,7 +21,7 @@ public class UserDefineException {
     public static void main(String[] args) {
         try {
             myMethod(2); // Call the method with an invalid option
-        } catch (CustomException1 | CustomException2 | CustomException3 | NullPointerException e) {
+        } catch (IncorrectFileName | AgeVerification | EmailVerification | NullPointerException e) {
             System.out.println("Caught exception: " + e.getClass().getSimpleName());
         } finally {
             System.out.println("Finally block executed.");
