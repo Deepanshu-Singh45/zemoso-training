@@ -38,9 +38,9 @@ class Tricycle extends Cycle {
     }
 }
 
-public class Part2 {
-    public static void main(String[] args) {
+class CycleFactory {
 
+    public void getCycles() {
         Cycle[] cycles = {new Unicycle(1), new Bicycle(2), new Tricycle(3)};
 
         for(Cycle cycle : cycles) {
@@ -53,6 +53,15 @@ public class Part2 {
                 ((Bicycle) cycle).balance(); // downcasting
             }
         }
+    }
+
+}
+
+public class Part2 {
+    public static void main(String[] args) {
+
+        CycleFactory cycles = new CycleFactory();
+        cycles.getCycles();
 
     }
 }
